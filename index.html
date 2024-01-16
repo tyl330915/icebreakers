@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>103 Random Ice Breaker Generator</title>
+    <title>Random Ice Breaker Generator</title>
     <style>
         body {
             display: flex;
@@ -41,12 +41,19 @@
             justify-content: center;
             align-items: center;
             text-align: center;
-            font-size: 80px;
+            font-size: 24px;
             color: #666;
             border: 1px solid #ccc;
             padding: 20px;
             border-radius: 10px;
             background-color: white;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .question {
+            font-weight: bold;
+            font-size: 4vw;
         }
     </style>
 </head>
@@ -54,7 +61,8 @@
 <body>
     <h1>COR-103 Random Ice Breaker Generator</h1>
     <button onclick="generateQuestion()">Generate Question</button>
-    <p id="question"></p>
+    <p id="questionBox"><span id="question" class="question"></span></p>
+    <div id="counter"></div>
 
     <script>
         let questions = [
@@ -100,12 +108,12 @@
 
             usedQuestions.push(question);
             questions.splice(index, 1);
+
+            document.getElementById('counter').innerText = "Questions left: " + questions.length;
+
+
         }
     </script>
-</body>
-
-</html>
-</script>
 </body>
 
 </html>
