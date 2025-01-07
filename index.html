@@ -1,119 +1,45 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <title>Random Ice Breaker Generator</title>
-    <style>
-        body {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            background-color: #f0f0f0;
-            font-family: Arial, sans-serif;
-        }
-        
-        h1 {
-            color: #333;
-        }
-        
-        button {
-            padding: 10px 20px;
-            margin: 20px 0;
-            font-size: 18px;
-            border: none;
-            border-radius: 5px;
-            background-color: #007BFF;
-            color: white;
-            cursor: pointer;
-        }
-        
-        button:hover {
-            background-color: #0056b3;
-        }
-        
-        p {
-            width: 50%;
-            min-height: 50vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            font-size: 24px;
-            color: #666;
-            border: 1px solid #ccc;
-            padding: 20px;
-            border-radius: 10px;
-            background-color: white;
-            overflow: hidden;
-            position: relative;
-        }
-        
-        .question {
-            font-weight: bold;
-            font-size: 4vw;
-        }
-    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Topic Generator</title>
 </head>
 
 <body>
-    <h1>COR-103 Random Ice Breaker Generator</h1>
-    <button onclick="generateQuestion()">Generate Question</button>
-    <p id="questionBox"><span id="question" class="question"></span></p>
-    <div id="counter"></div>
+    <button id="randomTopicButton">Show Random Topic</button>
+    <p></p>
+    <p id="displayTopic"></p>
 
-    <script>
-        let questions = [
-            "What's your favorite app on your phone?", "What piece of technology could you not live without?",
-            "Have you ever built or modified your own computer?",
-            "What's one technology skill you wish you had?",
-            "If you could invent a piece of technology, what would it do?",
-            "What's your favorite social media platform and why?",
-            "Do you prefer e-books or physical books?",
-            "What's the most interesting tech news you've read recently?",
-            "What's your opinion on artificial intelligence?",
-            "Have you ever tried coding? If so, what did you create?",
-            "What's your favorite video game?",
-            "How do you feel about the impact of technology on our privacy?",
-            "What's the most impressive use of technology you've ever seen?",
-            "What tech gadget is currently on your wish list?",
-            "How has technology changed your life in the last five years?",
-            "What's your favorite tech-related movie or TV show?",
-            "What's one piece of technology you wish never existed?",
-            "If you could improve one piece of technology you use every day, what would it be, and how?",
-            "What's the last song you listened to?", "Do you follow any influencers or celebrities on social media? If so, who?", "What's your favorite genre of movies or books?", "Have you ever unfollowed someone on social media? Why?", "What's a popular TV show or movie you couldn't get into?", "Do you think media representation is important? Why?", "What's the most interesting article you've read recently?", "Do you think social media has more positive or negative impacts?", "What's a book that you think should be turned into a movie?", "If you could have dinner with a character from a book or movie, who would it be?",
-            "What's the last movie you watched and what did you think about it?",
-            "Do you have a favorite news source? Why do you prefer it?",
-            "What's your favorite social media platform and why?",
-            "What was the last book you read for pleasure?",
-            "What is your favorite book?",
-            "Do you listen to podcasts? If so, which ones are your favorites?",
-            "What's the most binge-worthy TV series you've watched recently?", "Have you ever considered starting a blog or a YouTube channel? What would it be about?", "What's the most interesting documentary you've watched?", "What's the best piece of advice you've ever received?", "Do you prefer digital or print media? Why?", "What's your opinion on the influence of social media on society today?", "What's the best gift you've ever received?", "If you could have dinner with anyone, living or dead, who would it be?", "What's the most interesting place you've ever visited?", "What's the most unusual job you've ever had?", "What's something you could talk about for hours?", "What's the most daring thing you've ever done?", "What's the best piece of advice you've ever received?", "What's the most challenging thing you've ever done?", "If you could have any superpower, what would it be and why?", "What's your favorite hobby or pastime?", "If you could live anywhere in the world, where would it be?", "What's something most people don't know about you?", "What's your favorite season and why?", "If you could learn any language fluently, which would it be?", "What's your favorite childhood memory?", "If you could meet any historical figure, who would it be and why?", "What's the last thing you learned that surprised you?", "What's your favorite family tradition?", "If you could travel back in time, what period would you go to?",
-            "What's something you want to achieve in the next year?", "What's a movie that made you laugh really hard?", "Do you prefer to watch movies at home or in a theater? Why?", "What's your favorite viral video?", "If you could be a character in any TV show, who would you be?", "What's a book that changed your perspective about the world?", "Do you prefer reality TV or scripted TV?", "What's your favorite video game and why?", "What's a movie or TV show that you think is overrated?", "If you wrote a book, what would it be about?", "If they made a movie about your life, who would be the star playing you?", "When was the last time you saw a movie in the theater, and what was the movie?", "Does your family subscribe to cable or satellite TV?", "What one piece of modern technology would you like to have during the upcoming zombie apocalypse?", "Which celebrity do you hate?", "Which music source do you use the most? (e.g. Spotify, Apple Music, etc.)", "What might people find surprising in your life?", "What is the longest you have gone without your phone in the past couple of years?", "Is it a good thing that Taylor Swift is so popular?", "Have you ever met any celebrities?", "Is there such a thing as bad taste in art, and how would you define it?"
-        ];
-
-        let usedQuestions = [];
-
-        function generateQuestion() {
-            if (questions.length === 0) {
-                questions = usedQuestions;
-                usedQuestions = [];
-            }
-
-            let index = Math.floor(Math.random() * questions.length);
-            let question = questions[index];
-            document.getElementById('question').innerText = question;
-
-            usedQuestions.push(question);
-            questions.splice(index, 1);
-
-            document.getElementById('counter').innerText = "Questions left: " + questions.length;
-
-
-        }
-    </script>
+    <script src="script.js"></script>
 </body>
+
+
+<style>
+    body {
+        background-color: #F0F0F0;
+    }
+    
+    button {
+        display: block;
+        margin: 0 auto;
+        background-color: red;
+        font-size: 24px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+    
+    #displayTopic {
+        font-size: 100px;
+        font-weight: bold;
+        padding: 100px;
+        text-shadow: 2px 2px 2px rgb(103, 103, 103);
+        align-items: center;
+        text-align: center;
+    }
+</style>
 
 </html>
