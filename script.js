@@ -1,3 +1,5 @@
+const topics = [
+
 "What’s the last song you listened to?",
     "Do you follow any influencers or celebrities on social media? If so, who?",
     "What’s your favorite genre of movies or books?",
