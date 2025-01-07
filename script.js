@@ -55,7 +55,7 @@ const topics = [
     "Do you ever listen to the radio? If so, what do you listen to?",
     "Can you name a culture or group in Hollywood movies which is severely underrepresented?",
     "What role do you think journalism plays in society today?",
-    "Do you trust the govenment? Why?",
+    "Do you trust the government? Why?",
     "How do you stay updated with current events?",
     "What’s your opinion on the influence of influencers on social media?",
     "How do you manage your screen time?",
