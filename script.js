@@ -81,7 +81,7 @@ const topics = [
     "How do you use AI in your daily life?",
     "Do you feel that your life will be better than your parents'? Why or why not?",
     "Are we lonlier than people used to be? Why or why not?",
-    "What, if any, should be the limits on the freedom of speech?",
+    "What, if any, should be the limits on the freedom of speech?"
 ];
 
 
