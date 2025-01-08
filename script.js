@@ -80,7 +80,7 @@ const topics = [
     "Do you care if an artwork is made with AI? Why or why not?",
     "How do you use AI in your daily life?",
     "Do you feel that your life will be better than your parents'? Why or why not?",
-    "Are we lonlier than people used to be? Why or why not?",
+    "Are we lonelier than people used to be? Why or why not?",
     "What, if any, should be the limits on the freedom of speech?"
 ];
 
